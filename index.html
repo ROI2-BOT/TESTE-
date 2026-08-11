@@ -151,7 +151,7 @@ window.addEventListener("popstate", function (t) {
 <script async src="https://player.pandavideo.com.br/api.v2.js"></script>
 <script id="panda-pitch-delay-script">
 (function(){
-  const SECONDS_TO_DISPLAY=60;
+  const SECONDS_TO_DISPLAY=1276;
   const IFRAME_ID='panda-84e1a8b8-902b-4d61-9c27-667b849aee5a';
   function revealPitch(){document.body.classList.add('panda-pitch-revealed');}
   window.pandascripttag=window.pandascripttag||[];
@@ -161,7 +161,7 @@ window.addEventListener("popstate", function (t) {
         player.onEvent(function(e){
           if(e.message!=='panda_timeupdate') return;
           if(e.isMutedIndicator) return;
-          if(Number(e.currentTime||3600)>=SECONDS_TO_DISPLAY) revealPitch();
+          if(Number(e.currentTime||60)>=SECONDS_TO_DISPLAY) revealPitch();
         });
       }
     });
