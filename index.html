@@ -161,7 +161,7 @@ window.addEventListener("popstate", function (t) {
         player.onEvent(function(e){
           if(e.message!=='panda_timeupdate') return;
           if(e.isMutedIndicator) return;
-          if(Number(e.currentTime||00:22)>=SECONDS_TO_DISPLAY) revealPitch();
+          if(Number(e.currentTime||00.22)>=SECONDS_TO_DISPLAY) revealPitch();
         });
       }
     });
